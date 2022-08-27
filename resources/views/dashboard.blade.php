@@ -176,6 +176,7 @@
                 },
                 UploadComplete: function(up, file){
                     console.log(file);
+                    window.location.reload();
                     // toastr.success('Your File Uploaded Successfully!!', 'Success Alert', {timeOut: 5000});
                 },
                 Error: function (up, err, file) {
