@@ -108,7 +108,7 @@ class PassportAuthController extends Controller
             User::create([
                 'email' => $request->email,
                 'name' => $request->username,
-                'password' => $request->password,
+                'password' => bcrypt($request->password),
             ]);
 
             return redirect('/');
