@@ -11,7 +11,7 @@ class DashboardController extends Controller
     {
         try {
             $cortes = Corte::with('user')
-                ->orderBy('created_at', 'asc')
+                ->orderBy('created_at', 'desc')
                 ->paginate(5);
 
             return view('dashboard', compact('cortes'));
